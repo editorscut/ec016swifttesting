@@ -4,6 +4,6 @@ import Testing
 struct SampleTests {
   
   @Test func example() async throws {
-    #expect(isConnected)
+    #expect(isConnected == true)
   }
 }
