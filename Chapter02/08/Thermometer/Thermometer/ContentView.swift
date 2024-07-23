@@ -1,12 +1,15 @@
 import SwiftUI
+import TemperatureCalculations
 
 struct ContentView: View {
+  @Bindable private var temperature = Temperature()
+  
   var body: some View {
     VStack {
-      Image(systemName: "globe")
-        .imageScale(.large)
-        .foregroundStyle(.tint)
-      Text("Hello, world!")
+      Text(temperature.descriptionInC)
+      Slider(value: $temperature.inCelsius,
+             in: 0...100)
+      Text(temperature.descriptionInF)
     }
     .padding()
   }
