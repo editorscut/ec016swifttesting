@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct Display: View {
+struct DisplayView: View {
   private var displayedValue = CurrentValue.shared.displayedValue
   
   var body: some View {
@@ -17,5 +17,5 @@ struct Display: View {
 }
 
 #Preview {
-  Display()
+  DisplayView()
 }

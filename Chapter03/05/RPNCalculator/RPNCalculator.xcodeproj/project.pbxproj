@@ -22,9 +22,9 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
+		624F00012C5587BE00797640 /* Preview Content */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = "Preview Content"; sourceTree = "<group>"; };
 		626B3E842C5520B3003B3A6E /* RPNCalculator */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = RPNCalculator; sourceTree = "<group>"; };
 		626B3E952C5520B4003B3A6E /* RPNCalculatorTests */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = RPNCalculatorTests; sourceTree = "<group>"; };
-		62A6C6B82C555D9A0095B31A /* Preview Content */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = "Preview Content"; sourceTree = "<group>"; };
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,7 +49,7 @@
 			isa = PBXGroup;
 			children = (
 				626B3E842C5520B3003B3A6E /* RPNCalculator */,
-				62A6C6B82C555D9A0095B31A /* Preview Content */,
+				624F00012C5587BE00797640 /* Preview Content */,
 				626B3E952C5520B4003B3A6E /* RPNCalculatorTests */,
 				626B3E832C5520B3003B3A6E /* Products */,
 			);
@@ -80,8 +80,8 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
+				624F00012C5587BE00797640 /* Preview Content */,
 				626B3E842C5520B3003B3A6E /* RPNCalculator */,
-				62A6C6B82C555D9A0095B31A /* Preview Content */,
 			);
 			name = RPNCalculator;
 			packageProductDependencies = (
