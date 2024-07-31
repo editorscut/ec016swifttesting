@@ -1,5 +1,4 @@
 enum UnaryOperator: String {
-
   case square = "x²"
   case squareroot = "√x"
   case reciprocal = "1/x"

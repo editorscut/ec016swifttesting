@@ -4,5 +4,5 @@ import Observation
 @Observable
 class CurrentValue {
   static let shared = CurrentValue()
- var displayedValue: String = ""
+  var displayedValue: String = ""
 }
