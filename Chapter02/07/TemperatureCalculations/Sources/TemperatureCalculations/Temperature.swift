@@ -26,11 +26,11 @@ extension Temperature: CustomStringConvertible {
   }
   
   public var descriptionInC: String {
-    "\(int(from: inCelsius))º C"
+    "\(int(from: inCelsius))° C"
   }
   
   public var descriptionInF: String {
-    "\(int(from: inFahrenheit))º F"
+    "\(int(from: inFahrenheit))° F"
   }
   
   private func int(from double: Double) -> Int {

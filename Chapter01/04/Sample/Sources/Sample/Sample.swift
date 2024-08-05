@@ -1,1 +1,1 @@
-public let isConnected = false
+public let isConnected = true

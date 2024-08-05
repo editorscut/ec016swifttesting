@@ -2,28 +2,28 @@ import Testing
 import TemperatureCalculations
 
 
-@Test("Display 50º C (122º C)",
+@Test("Display 50° C (122° C)",
       .tags(Tag.displayAsString))
 func defaultValueDisplay() {
   let defaultTemp = Temperature()
-  #expect(defaultTemp.descriptionInC == "50º C")
-  #expect(defaultTemp.descriptionInF == "122º F")
-  #expect("\(defaultTemp)" == "50º C (122º F)")
+  #expect(defaultTemp.descriptionInC == "50° C")
+  #expect(defaultTemp.descriptionInF == "122° F")
+  #expect("\(defaultTemp)" == "50° C (122° F)")
 }
 
 
-@Test("Display 75.7º C (168º F)",
+@Test("Display 75.7° C (168° F)",
       .tags(Tag.displayAsString))
 func nontIntDisplay() {
   let nonIntTemp = Temperature(inCelsius: 75.7)
-  #expect(nonIntTemp.descriptionInC == "76º C")
-  #expect(nonIntTemp.descriptionInF == "168º F")
-  #expect("\(nonIntTemp)" == "76º C (168º F)")
+  #expect(nonIntTemp.descriptionInC == "76° C")
+  #expect(nonIntTemp.descriptionInF == "168° F")
+  #expect("\(nonIntTemp)" == "76° C (168° F)")
 }
 
-@Test("Can change temperature from 0º C to 40º C")
+@Test("Can change temperature from 0° C to 40° C")
 func changingTemp() {
   let freezing = Temperature(inCelsius: 0)
   freezing.inCelsius += 40.0
-  #expect(freezing.descriptionInC == "40º C")
+  #expect(freezing.descriptionInC == "40° C")
 }

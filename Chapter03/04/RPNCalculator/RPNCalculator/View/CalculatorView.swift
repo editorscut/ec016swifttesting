@@ -17,8 +17,8 @@ struct CalculatorView: View {
       GridRow {
         UnaryOperatorButton(.squareroot)
         NumberButton("4")
-        NumberButton("3")
-        NumberButton("2")
+        NumberButton("5")
+        NumberButton("6")
         BinaryOperatorButton(.multiply)
       }
       GridRow {
