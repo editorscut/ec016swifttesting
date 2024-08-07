@@ -35,6 +35,16 @@ extension CurrentValue {
     displayedValue += digit
   }
   
+  func decimalPoint() {
+    if !containsDecimalPoint {
+      displayedValue += "."
+    }
+  }
+  
+  var containsDecimalPoint: Bool {
+    displayedValue.contains(".")
+  }
+  
   func clearDisplay() {
     displayedValue = ""
     displayingEnteredValue = false

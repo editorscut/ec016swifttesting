@@ -9,27 +9,50 @@ struct NumberEntry {
   let current = CurrentValue.shared
   
   @Test("Display is initially empty")
-  func t00emptyDisplay() {
+  func emptyDisplay() {
     #expect(current.displayedValue.isEmpty == true)
   }
   
   @Test("Press 2 Display contains 2")
-  func t01recordTwo() {
+  func recordTwo() {
     current.record(digit: "2")
     #expect(current.displayedValue == "2")
   }
   
   @Test("Then Press 3 Display contains 23")
-  func t02recordThree() {
+  func recordThree() {
     current.record(digit: "3")
     #expect(current.displayedValue == "23")
   }
   
   @Test("Then enter")
-  func t03enter() {
+  func enter() {
     current.enter()
     #expect(current.displayedValue == "23")
     #expect(current.stackIsEmpty == false)
     #expect(current.displayingEnteredValue == true)
+  }
+  
+  @Test("Press 4 after enter display contains 4")
+  func recordFour() {
+    current.record(digit: "4")
+    #expect(current.displayedValue == "4")
+    #expect(current.displayingEnteredValue == false)
+  }
+  
+  @Test("Press drop display contains 23")
+  func drop() {
+    current.drop()
+    #expect(current.displayedValue == "23.0")
+    #expect(current.displayingEnteredValue == true)
+    #expect(current.stackIsEmpty == true)
+  }
+  
+  @Test("Can enter and drop negative")
+  func negative() {
+    current.displayedValue = "-7.8"
+    current.enter()
+    current.drop()
+    #expect(current.displayedValue == "-7.8")
   }
 }
