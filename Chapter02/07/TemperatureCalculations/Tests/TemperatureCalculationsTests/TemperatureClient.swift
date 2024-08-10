@@ -3,7 +3,7 @@ import TemperatureCalculations
 
 
 @Test("Display 50° C (122° C)",
-      .tags(Tag.displayAsString))
+      .tags(.displayAsString))
 func defaultValueDisplay() {
   let defaultTemp = Temperature()
   #expect(defaultTemp.descriptionInC == "50° C")
@@ -13,7 +13,7 @@ func defaultValueDisplay() {
 
 
 @Test("Display 75.7° C (168° F)",
-      .tags(Tag.displayAsString))
+      .tags(.displayAsString))
 func nontIntDisplay() {
   let nonIntTemp = Temperature(inCelsius: 75.7)
   #expect(nonIntTemp.descriptionInC == "76° C")

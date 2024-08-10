@@ -3,7 +3,7 @@ import Testing
 
 @MainActor
 @Suite("Number Entry",
-       .tags(Tag.display, Tag.numberEntry),
+       .tags(.display, .numberEntry),
        .serialized)
 struct NumberEntry {
   let current = CurrentValue.shared

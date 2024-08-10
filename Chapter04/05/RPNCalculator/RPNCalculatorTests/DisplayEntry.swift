@@ -2,11 +2,11 @@ import Testing
 @testable import RPNCalculator
 
 @Suite("Display Entry",
-       .tags(Tag.display),
+       .tags(.display),
        .serialized)
 struct DisplayEntry {
   @Suite("Number Entry",
-         .tags(Tag.numberEntry))
+         .tags(.numberEntry))
   @MainActor
   struct NumberEntry {
     let current = CurrentValue.shared
@@ -62,7 +62,7 @@ struct DisplayEntry {
   }
   @MainActor
   @Suite("Decimal Point",
-         .tags(Tag.decimalPoint))
+         .tags(.decimalPoint))
   struct DecimalPoint {
     let current = CurrentValue.shared
     

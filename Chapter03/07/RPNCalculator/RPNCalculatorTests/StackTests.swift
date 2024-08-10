@@ -2,7 +2,7 @@ import Testing
 @testable import RPNCalculator
 
 @Suite("Stack tests for create, push, and pop",
-       .tags(Tag.stacks))
+       .tags(.stacks))
 struct StackTests {
   let emptyStack = Stack()
   let nonEmptyStack = Stack().push(10.3)
@@ -13,7 +13,7 @@ struct StackTests {
   }
   
   @Test("A stack after push is not empty",
-        .tags(Tag.push))
+        .tags(.push))
   func afterAPushNonEmptyStack() {
     let newStack = emptyStack.push(10.3)
     #expect(emptyStack.isEmpty == true)
@@ -28,7 +28,7 @@ struct StackTests {
   
   
   @Test("A pop returns last element pushed",
-        .tags(Tag.pop))
+        .tags(.pop))
   func popAfterPush() throws {
     let (poppedValue, newStack) = try nonEmptyStack.pop()
     #expect(newStack.isEmpty == true)
@@ -36,7 +36,7 @@ struct StackTests {
   }
   
   @Test("Popping empty stack throws an error",
-        .tags(Tag.pop))
+        .tags(.pop))
   func popEmptyStack() throws {
     #expect(throws: EmptyStack.self) {
       try emptyStack.pop()
@@ -45,7 +45,7 @@ struct StackTests {
   }
   
   @Test("Avoid Popping empty stack",
-        .tags(Tag.pop))
+        .tags(.pop))
   func dontPopEmptyStack() throws {
     try #require(throws: EmptyStack.self) {
       try emptyStack.pop()
@@ -54,7 +54,7 @@ struct StackTests {
   }
   
   @Test("Can pop nonempty stack",
-        .tags(Tag.pop))
+        .tags(.pop))
   func canPopNonemptyStack() throws {
     let (poppedValue, newStack) =
     try #require(try nonEmptyStack.pop())

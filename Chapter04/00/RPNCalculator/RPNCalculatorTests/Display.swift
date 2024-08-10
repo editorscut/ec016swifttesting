@@ -3,7 +3,7 @@ import Testing
 
 @MainActor
 @Suite("Display logic",
-       .tags(Tag.display))
+       .tags(.display))
 struct Display {
   let displayedValue = CurrentValue().displayedValue
 
@@ -14,7 +14,7 @@ struct Display {
   
   @MainActor
   @Suite("Display's stack",
-         .tags(Tag.stacks))
+         .tags(.stacks))
   struct DisplayStack {
     var currentValue = CurrentValue()
     

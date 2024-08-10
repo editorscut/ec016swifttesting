@@ -3,7 +3,7 @@ import Testing
 
 @MainActor
 @Test("Display is initially empty",
-      .tags(Tag.display))
+      .tags(.display))
 func emptyDisplay() {
   let displayedValue = CurrentValue().displayedValue
   #expect(displayedValue.isEmpty == true)

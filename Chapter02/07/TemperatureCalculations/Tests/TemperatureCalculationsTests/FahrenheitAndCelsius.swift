@@ -8,7 +8,7 @@ func defaultValue() {
 }
 
 @Test("0° C should be 0° C and 32° F",
-      .tags(Tag.createFromC, Tag.convertCtoF))
+      .tags(.createFromC, .convertCtoF))
 func freezing() {
   let freezing = Temperature(inCelsius: 0)
   #expect(freezing.inCelsius == 0.0)
@@ -16,15 +16,15 @@ func freezing() {
 }
 
 @Test("100° C should be 212° F",
-      .tags(Tag.createFromC, Tag.convertCtoF))
+      .tags(.createFromC, .convertCtoF))
 func boiling() {
   let boiling = Temperature(inCelsius: 100)
   #expect(boiling.inFahrenheit == 212.0)
 }
 
 @Test("New Temperature in °F",
-      .tags(Tag.createFromF, Tag.convertCtoF,
-            Tag.convertFtoC))
+      .tags(.createFromF, .convertCtoF,
+            .convertFtoC))
 func createInFahrenheit() {
   let temperature = Temperature(inFahrenheit: 140)
   #expect(temperature.inCelsius == 60.0)
