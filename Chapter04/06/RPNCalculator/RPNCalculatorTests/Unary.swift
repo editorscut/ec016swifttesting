@@ -31,13 +31,14 @@ struct Unary {
          .tags(.unary))
   struct UnaryViaDisplay {
     let current = CurrentValue()
-    
     @Test
     func square() {
       current.displayedValue = "5"
       current.perform(.square)
       #expect(current.displayedValue == "25.0")
       #expect(current.displayingEnteredValue == true)
+      current.record(digit: "2")
+      #expect(current.displayedValue == "2")
     }
     
     @Test
@@ -46,6 +47,8 @@ struct Unary {
       current.perform(.squareroot)
       #expect(current.displayedValue == "Error")
       #expect(current.displayingEnteredValue == true)
+      current.record(digit: "2")
+      #expect(current.displayedValue == "2")
     }
     
     @Test
@@ -54,6 +57,8 @@ struct Unary {
       current.perform(.reciprocal)
       #expect(current.displayedValue == "Error")
       #expect(current.displayingEnteredValue == true)
+      current.record(digit: "2")
+      #expect(current.displayedValue == "2")
     }
   }
 }
