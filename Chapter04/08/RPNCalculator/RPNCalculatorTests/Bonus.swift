@@ -21,7 +21,7 @@ struct Bonus {
                    pair : (Double, Double)) throws {
     let (x, y) = pair
     let xThenY = try op.operation(x, y)
-    let yThenX = try op.operation(x, y)
+    let yThenX = try op.operation(y, x)
     #expect(xThenY == yThenX)
   }
 
