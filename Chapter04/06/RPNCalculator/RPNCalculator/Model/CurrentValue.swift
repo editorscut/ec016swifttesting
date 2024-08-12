@@ -77,16 +77,15 @@ extension CurrentValue {
   func perform(_ binary: BinaryOperator)  {
     if let secondArgument = Double(displayedValue),
        let (firstArgument, poppedStack) = try? stack.pop() {
-      defer {
-        displayingEnteredValue = true
-      }
       do {
         let result
         = try binary.operation(firstArgument, secondArgument)
         displayedValue = String(result)
         stack = poppedStack
+        enter()
       } catch {
         displayedValue = "Error"
+        displayingEnteredValue = true
       }
     }
   }

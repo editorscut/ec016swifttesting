@@ -33,10 +33,12 @@ struct Binary {
       current.displayedValue = "3"
       current.perform(.divide)
       #expect(current.displayedValue == "2.0")
-      #expect(current.stackIsEmpty == true)
+      #expect(current.stackIsEmpty == false)
       #expect(current.displayingEnteredValue == true)
       current.record(digit: "7")
       #expect(current.displayedValue == "7")
+      current.perform(.add)
+      #expect(current.displayedValue == "9.0")
     }
         
     @Test

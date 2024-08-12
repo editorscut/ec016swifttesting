@@ -8,7 +8,7 @@ struct Bonus {
   static let samples: [Double] = [5, 0, -7]
   static let randomSamples: [Double]  = {
     var doubles: [Double] = []
-    for _ in 0...Int.random(in: 1...3) {
+    for _ in 0...3 {
       doubles.append(Double.random(in: -10...10))
     }
     return doubles

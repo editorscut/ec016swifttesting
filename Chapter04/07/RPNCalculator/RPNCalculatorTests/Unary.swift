@@ -39,6 +39,7 @@ struct Unary {
       #expect(current.displayingEnteredValue == true)
       current.record(digit: "2")
       #expect(current.displayedValue == "2")
+      #expect(current.stackIsEmpty == true)
     }
     
     @Test
@@ -49,6 +50,7 @@ struct Unary {
       #expect(current.displayingEnteredValue == true)
       current.record(digit: "2")
       #expect(current.displayedValue == "2")
+      #expect(current.stackIsEmpty == true)
     }
     
     @Test
@@ -59,6 +61,7 @@ struct Unary {
       #expect(current.displayingEnteredValue == true)
       current.record(digit: "2")
       #expect(current.displayedValue == "2")
+      #expect(current.stackIsEmpty == true)
     }
   }
 }
