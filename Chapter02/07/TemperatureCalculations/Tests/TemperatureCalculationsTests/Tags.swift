@@ -6,5 +6,4 @@ extension Tag {
   @Tag static var convertCtoF: Self
   @Tag static var convertFtoC: Self
   @Tag static var displayAsString: Self
-  @Tag static var unused: Self
 }

@@ -11,7 +11,6 @@ struct DropButton: View {
         .font(.title)
         .foregroundStyle(.red)
     }
-    .disabled(currentValue.stackIsEmpty)
   }
 }
 
