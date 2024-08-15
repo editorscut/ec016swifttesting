@@ -98,5 +98,15 @@ struct DisplayEntry {
       current.drop()
       #expect(current.displayedValue == "0.78")
     }
+    
+    @Test("Initial decimal point after entering decimal")
+    func initialDecimalAgain() {
+      current.clearDisplay()
+      current.displayedValue = ".2"
+      current.enter()
+      current.decimalPoint()
+      current.record(digit: "3")
+      #expect(current.displayedValue == ".3")
+    }
   }
 }

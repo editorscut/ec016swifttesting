@@ -36,6 +36,9 @@ extension CurrentValue {
   }
   
   func decimalPoint() {
+    if displayingEnteredValue {
+      clearDisplay()
+    }
     if !containsDecimalPoint {
       displayedValue += "."
     }
