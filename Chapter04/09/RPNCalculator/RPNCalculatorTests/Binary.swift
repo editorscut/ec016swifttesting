@@ -8,7 +8,7 @@ struct Binary {
   @Test
   func operations() throws {
     #expect(try BinaryOperator.add.operation(6, 2) == 8)
-    #expect(try BinaryOperator.substract.operation(6, 2) == 4)
+    #expect(try BinaryOperator.subtract.operation(6, 2) == 4)
     #expect(try BinaryOperator.multiply.operation(6, 2) == 12)
     #expect(try BinaryOperator.divide.operation(6, 2) == 3)
   }

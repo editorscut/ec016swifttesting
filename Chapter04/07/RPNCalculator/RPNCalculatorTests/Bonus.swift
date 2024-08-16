@@ -3,7 +3,7 @@ import Testing
 
 @Suite("Parametrized test examples")
 struct Bonus {
-  static let additiveOps: [BinaryOperator] = [.add, .substract]
+  static let additiveOps: [BinaryOperator] = [.add, .subtract]
   static let multiplicativeOps: [BinaryOperator] = [.multiply, .divide]
   static let samples: [Double] = [5, 0, -7]
   static let randomSamples: [Double]  = {

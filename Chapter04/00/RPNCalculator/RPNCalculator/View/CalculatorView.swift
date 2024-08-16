@@ -26,7 +26,7 @@ struct CalculatorView: View {
         NumberButton("1")
         NumberButton("2")
         NumberButton("3")
-        BinaryOperatorButton(.substract)
+        BinaryOperatorButton(.subtract)
       }
       GridRow {
         DropButton()

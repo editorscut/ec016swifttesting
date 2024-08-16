@@ -1,6 +1,6 @@
 enum BinaryOperator: String {
   case add = "+"
-  case substract = "−"
+  case subtract = "−"
   case multiply = "×"
   case divide = "÷"
 }
