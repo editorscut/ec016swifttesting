@@ -20,22 +20,22 @@ struct Display {
     
     @Test("Stack is initially empty")
     func stackInitiallyEmpty() {
-      #expect(currentValue.stackIsEmpty == true)
+      #expect(currentValue.isStackEmpty == true)
     }
     
     @Test("Enter no value")
     func enterNoValue() {
-      #expect(currentValue.displayingEnteredValue == false)
+      #expect(currentValue.isDisplayingEnteredValue == false)
       currentValue.enter()
-      #expect(currentValue.stackIsEmpty == true)
-      #expect(currentValue.displayingEnteredValue == false)
+      #expect(currentValue.isStackEmpty == true)
+      #expect(currentValue.isDisplayingEnteredValue == false)
     }
     
     @Test("Enter displayedValue")
     func enterDisplayedValue() {
       currentValue.displayedValue = "5.7"
       currentValue.enter()
-      #expect(currentValue.stackIsEmpty == false)
+      #expect(currentValue.isStackEmpty == false)
     }
   }
 }

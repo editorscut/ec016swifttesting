@@ -20,22 +20,22 @@ struct Display {
     
     @Test("Stack is initially empty")
     func stackInitiallyEmpty() {
-      #expect(currentValue.stackIsEmpty == true)
+      #expect(currentValue.isStackEmpty == true)
     }
     
     @Test("Enter no value")
     func enterNoValue() {
-      #expect(currentValue.displayingEnteredValue == false)
+      #expect(currentValue.isDisplayingEnteredValue == false)
       currentValue.enter()
-      #expect(currentValue.stackIsEmpty == true)
-      #expect(currentValue.displayingEnteredValue == false)
+      #expect(currentValue.isStackEmpty == true)
+      #expect(currentValue.isDisplayingEnteredValue == false)
     }
     
     @Test("Enter displayedValue")
     func enterDisplayedValue() {
       currentValue.displayedValue = "5.7"
       currentValue.enter()
-      #expect(currentValue.stackIsEmpty == false)
+      #expect(currentValue.isStackEmpty == false)
     }
     
     @Test("Enter 23 then drop")
@@ -43,13 +43,13 @@ struct Display {
       currentValue.displayedValue = "23"
       currentValue.enter()
       #expect(currentValue.displayedValue == "23")
-      #expect(currentValue.stackIsEmpty == false)
-      #expect(currentValue.displayingEnteredValue == true)
+      #expect(currentValue.isStackEmpty == false)
+      #expect(currentValue.isDisplayingEnteredValue == true)
 
       currentValue.drop()
       #expect(currentValue.displayedValue == "23.0")
-      #expect(currentValue.displayingEnteredValue == true)
-      #expect(currentValue.stackIsEmpty == true)
+      #expect(currentValue.isDisplayingEnteredValue == true)
+      #expect(currentValue.isStackEmpty == true)
     }
     
     @Test("Fill and clear the stack")
@@ -59,12 +59,12 @@ struct Display {
       currentValue.displayedValue = "45"
       currentValue.enter()
       #expect(currentValue.displayedValue == "45")
-      #expect(currentValue.stackIsEmpty == false)
+      #expect(currentValue.isStackEmpty == false)
       
       currentValue.clear()
       #expect(currentValue.displayedValue == "")
-      #expect(currentValue.displayingEnteredValue == false)
-      #expect(currentValue.stackIsEmpty == true)
+      #expect(currentValue.isDisplayingEnteredValue == false)
+      #expect(currentValue.isStackEmpty == true)
     }
   }
 }

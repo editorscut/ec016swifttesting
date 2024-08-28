@@ -6,18 +6,18 @@ class CurrentValue {
   static let shared = CurrentValue()
   var displayedValue: String = ""
   private var stack = Stack()
-  private(set) var displayingEnteredValue = false
+  private(set) var isDisplayingEnteredValue = false
 }
 
 extension CurrentValue {
-  var stackIsEmpty: Bool {
+  var isStackEmpty: Bool {
     stack.isEmpty
   }
   
   func enter() {
     if let double = Double(displayedValue) {
       stack = stack.push(double)
-      displayingEnteredValue = true
+      isDisplayingEnteredValue = true
     }
   }
   
@@ -29,14 +29,14 @@ extension CurrentValue {
 
 extension CurrentValue {
   func record(digit: String) {
-    if displayingEnteredValue {
+    if isDisplayingEnteredValue {
       clearDisplay()
     }
     displayedValue += digit
   }
   
   func decimalPoint() {
-    if displayingEnteredValue {
+    if isDisplayingEnteredValue {
       clearDisplay()
     }
     if !containsDecimalPoint {
@@ -50,14 +50,14 @@ extension CurrentValue {
   
   func clearDisplay() {
     displayedValue = ""
-    displayingEnteredValue = false
+    isDisplayingEnteredValue = false
   }
   
   func drop() {
     if let (value, poppedStack) = try? stack.pop() {
       stack = poppedStack
       displayedValue = String(value)
-      displayingEnteredValue = true
+      isDisplayingEnteredValue = true
     }
   }
 }

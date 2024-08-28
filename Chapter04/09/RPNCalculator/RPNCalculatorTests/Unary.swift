@@ -36,10 +36,10 @@ struct Unary {
       current.displayedValue = "5"
       current.perform(.square)
       #expect(current.displayedValue == "25.0")
-      #expect(current.displayingEnteredValue == true)
+      #expect(current.isDisplayingEnteredValue == true)
       current.record(digit: "2")
       #expect(current.displayedValue == "2")
-      #expect(current.stackIsEmpty == true)
+      #expect(current.isStackEmpty == true)
     }
     
     @Test
@@ -47,10 +47,10 @@ struct Unary {
       current.displayedValue = "-5"
       current.perform(.squareroot)
       #expect(current.displayedValue == "Error")
-      #expect(current.displayingEnteredValue == true)
+      #expect(current.isDisplayingEnteredValue == true)
       current.record(digit: "2")
       #expect(current.displayedValue == "2")
-      #expect(current.stackIsEmpty == true)
+      #expect(current.isStackEmpty == true)
     }
     
     @Test
@@ -58,10 +58,10 @@ struct Unary {
       current.displayedValue = "0"
       current.perform(.reciprocal)
       #expect(current.displayedValue == "Error")
-      #expect(current.displayingEnteredValue == true)
+      #expect(current.isDisplayingEnteredValue == true)
       current.record(digit: "2")
       #expect(current.displayedValue == "2")
-      #expect(current.stackIsEmpty == true)
+      #expect(current.isStackEmpty == true)
     }
   }
 }

@@ -29,23 +29,23 @@ struct NumberEntry {
   func enter() {
     current.enter()
     #expect(current.displayedValue == "23")
-    #expect(current.stackIsEmpty == false)
-    #expect(current.displayingEnteredValue == true)
+    #expect(current.isStackEmpty == false)
+    #expect(current.isDisplayingEnteredValue == true)
   }
   
   @Test("Press 4 after enter display contains 4")
   func recordFour() {
     current.record(digit: "4")
     #expect(current.displayedValue == "4")
-    #expect(current.displayingEnteredValue == false)
+    #expect(current.isDisplayingEnteredValue == false)
   }
   
   @Test("Press drop display contains 23")
   func drop() {
     current.drop()
     #expect(current.displayedValue == "23.0")
-    #expect(current.displayingEnteredValue == true)
-    #expect(current.stackIsEmpty == true)
+    #expect(current.isDisplayingEnteredValue == true)
+    #expect(current.isStackEmpty == true)
   }
   
   @Test("Can enter and drop negative")

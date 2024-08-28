@@ -29,7 +29,7 @@ struct NumberEntry {
   func enter() {
     current.enter()
     #expect(current.displayedValue == "23")
-    #expect(current.stackIsEmpty == false)
-    #expect(current.displayingEnteredValue == true)
+    #expect(current.isStackEmpty == false)
+    #expect(current.isDisplayingEnteredValue == true)
   }
 }

@@ -33,8 +33,8 @@ struct Binary {
       current.displayedValue = "3"
       current.perform(.divide)
       #expect(current.displayedValue == "2.0")
-      #expect(current.stackIsEmpty == false)
-      #expect(current.displayingEnteredValue == true)
+      #expect(current.isStackEmpty == false)
+      #expect(current.isDisplayingEnteredValue == true)
       current.record(digit: "7")
       #expect(current.displayedValue == "7")
       current.perform(.add)
@@ -48,8 +48,8 @@ struct Binary {
       current.displayedValue = "0"
       current.perform(.divide)
       #expect(current.displayedValue == "Error")
-      #expect(current.stackIsEmpty == false)
-      #expect(current.displayingEnteredValue == true)
+      #expect(current.isStackEmpty == false)
+      #expect(current.isDisplayingEnteredValue == true)
       current.record(digit: "7")
       #expect(current.displayedValue == "7")
     }
@@ -59,7 +59,7 @@ struct Binary {
       current.displayedValue = "6"
       current.perform(.divide)
       #expect(current.displayedValue == "6")
-      #expect(current.stackIsEmpty == true)
+      #expect(current.isStackEmpty == true)
     }
   }
 }
