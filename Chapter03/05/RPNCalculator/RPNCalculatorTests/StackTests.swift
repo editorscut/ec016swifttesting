@@ -25,7 +25,7 @@ func popAfterPush() throws {
 }
 
 @Test("Popping empty stack throws an error")
-func popEmptyStack() throws {
+func popEmptyStack()  {
   let stack = Stack()
   #expect(throws: EmptyStack.self) {
      try stack.pop()

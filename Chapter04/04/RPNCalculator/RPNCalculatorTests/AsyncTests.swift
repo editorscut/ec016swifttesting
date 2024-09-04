@@ -27,8 +27,8 @@ struct AsyncTests {
   @Test
   func closureAsync() async {
     let result = await withCheckedContinuation {continuation in
-      closureTimesTwo(5.8, completion: {(d: Double) -> Void in
-        continuation.resume(returning: d)})
+      closureTimesTwo(5.8, completion: { double in
+        continuation.resume(returning: double)})
     }
     #expect(result == 11.6)
   }

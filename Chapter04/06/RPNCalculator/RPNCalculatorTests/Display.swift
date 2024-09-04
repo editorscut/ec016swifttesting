@@ -16,7 +16,7 @@ struct Display {
   @Suite("Display's stack",
          .tags(.stacks))
   struct DisplayStack {
-    var currentValue = CurrentValue()
+    let currentValue = CurrentValue()
     
     @Test("Stack is initially empty")
     func stackInitiallyEmpty() {

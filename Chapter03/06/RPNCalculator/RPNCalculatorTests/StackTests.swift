@@ -25,7 +25,7 @@ struct StackTests {
   }
   
   @Test("Popping empty stack throws an error")
-  func popEmptyStack() throws {
+  func popEmptyStack()  {
     #expect(throws: EmptyStack.self) {
       try emptyStack.pop()
     }
