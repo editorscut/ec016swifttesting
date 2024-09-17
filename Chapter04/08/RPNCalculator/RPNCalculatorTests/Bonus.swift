@@ -1,7 +1,7 @@
 import Testing
 @testable import RPNCalculator
 
-@Suite("Parametrized test examples")
+@Suite("Parameterized test examples")
 struct Bonus {
   static let additiveOps: [BinaryOperator] = [.add, .subtract]
   static let multiplicativeOps: [BinaryOperator] = [.multiply, .divide]
